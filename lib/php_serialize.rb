@@ -20,7 +20,7 @@ module PHP
 	#
 	#   string = PHP.serialize(mixed var[, bool assoc])
 	#
-	# Array, Hash, Fixnum, Float, True/FalseClass, NilClass, String and Struct
+	# Array, Hash, Integer, Float, True/FalseClass, NilClass, String and Struct
 	# are supported; as are objects which support the to_assoc method, which
 	# returns an array of the form [['attr_name', 'value']..].  Anything else
 	# will raise a TypeError.
@@ -63,7 +63,7 @@ module PHP
 			when String, Symbol
 				s << "s:#{var.to_s.bytesize}:\"#{var.to_s}\";"
 
-			when Fixnum # PHP doesn't have bignums
+			when Integer # PHP doesn't have bignums
 				s << "i:#{var};"
 
 			when Float
