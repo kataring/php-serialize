@@ -20,7 +20,6 @@ Gem::Specification.new do |spec|
 	spec.require_path = "lib/"
 	spec.homepage = "https://github.com/jqr/php-serialize"
 	spec.test_files = Dir["test/*_test.rb"]
-	spec.has_rdoc = true
 
 	spec.add_development_dependency "bundler", "~> 1.15"
 	spec.add_development_dependency "rake", "~> 10.0"
